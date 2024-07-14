@@ -19,29 +19,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MyRcipeAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+               RecipeScreen(modifier = Modifier)
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MyRcipeAppTheme {
-        Greeting("Android")
     }
 }
